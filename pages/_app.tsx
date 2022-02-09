@@ -1,4 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { CursorProvider } from "react-cursor-custom";
+import { cursorSettingType } from 'interfaces';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -15,12 +17,19 @@ const theme = {
 }
 
 function App({ Component, pageProps }) {
+  const setting:cursorSettingType = {
+    ringSize: 30,
+    transitionTime: 200,
+    color: 'lightGray'
+  }
   return (
     <>
+    <CursorProvider {...setting}>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
+      </CursorProvider>
     </>
   )
 }

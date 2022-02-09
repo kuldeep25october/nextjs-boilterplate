@@ -8,3 +8,9 @@ export type User = {
   id: number
   name: string
 }
+
+export type cursorSettingType = {
+  color?: string;
+  ringSize?: number;
+  transitionTime?: number;
+}

@@ -1,14 +1,10 @@
-import Link from "next/link";
 import Layout from "components/common/Layout";
-import Greeting from "components/home/Greeting";
+import ScrollSlider from "components/common/ScrollSlider/ScrollSlider";
 
 const IndexPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">
-    <Greeting message={"Hello World with test"} />
-    <Link href="/about">
-      <a>About</a>
-    </Link>
-  </Layout>
+      <ScrollSlider />
+    </Layout>
 );
 
 export default IndexPage;
